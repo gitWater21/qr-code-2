@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(212, 45%, 89%);
+    --Grayish-blue: hsl(220, 15%, 55%);
+    --Dark-blue: hsl(218, 44%, 22%);
+}
+a{
+    color: rgba(0, 0, 128, 0.66);
+}
+body {
+    background-color: var(--Light-gray);
+}
+
+header {
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-inline: 1rem;
+}
+
+.title {
+    color: var(--Dark-blue);
+    text-decoration: underline;
+    text-align: center;
+    /* letter-spacing: -2px; */
+    word-spacing: 0.6rem;
+}
+
+.title::first-letter {
+    color: rgba(200, 37, 69, 0.805);
+
+}
+
+.qr-card {
+    max-width: 320px;
+    padding: 1rem;
+    padding-block-end: 2rem;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid; */
+    background-color: var(--White);
+    border-radius: 9px;
+    text-align: center;
+    box-shadow: 1px 1px 10px var(--Grayish-blue);
+    z-index: 1;
+
+    & .overlay {
+        position: absolute;
+        width: 50%;
+        height: 92%;
+        border-radius: 0 0 0 9px;
+        background-color: rgba(181, 179, 179, 0.088);
+        z-index: -1;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.208);
+    }
+
+    & .overlay2 {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 92%;
+        border-radius: 0 0 9px 0;
+        background-color: rgb(255, 255, 255);
+        z-index: -1;
+        box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.208);
+    }
+
+    & .img-box {
+        width: 100%;
+
+
+        & .qrcode-img {
+            width: 100%;
+            border-radius: 9px;
+
+        }
+
+    }
+
+    & .card-title {
+        margin-top: 1rem;
+        color: var(--Dark-blue);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.373);
+    }
+
+    & .card-text {
+        margin-top: 1.5rem;
+        line-height: 1.5;
+        color: var(--Grayish-blue);
+    }
+
+}
+footer{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+}
